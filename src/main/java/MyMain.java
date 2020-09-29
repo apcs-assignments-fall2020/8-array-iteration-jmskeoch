@@ -2,8 +2,13 @@ public class MyMain {
 
     // Reverses an array
     public static int[] reverse(int[] arr) {
-        // REPLACE WITH YOUR CODE HERE
-        return null;
+        int j = 0;
+        int[] result = new int[arr.length];
+        for(int i = arr.length-1; i > 0; i--) {
+            result[j] = arr[i];
+            j++;
+        }
+        return result;
     }
 
     // Finds the second largest number in an array
@@ -20,6 +25,10 @@ public class MyMain {
 
 
     public static void main(String[] args) {
-        // YOUR CODE HERE
+        int[] arr = {0, 1, 2, 3, 6, 9, 8};
+        int[] newArr = reverse(arr);
+        for(int i = 0; i < arr.length; i++) {
+            System.out.print(newArr[i] + " ");
+        }
     }
 }
